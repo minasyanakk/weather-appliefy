@@ -1,0 +1,34 @@
+{
+	"manifest_version": 3,
+
+	"name": "weather",  
+	"version": "0.1",  
+	"description": "weather in Kiyv", 
+	"icons": {
+        "128": "favicon.png"
+    },
+	"permissions": [ 
+			"https://*/*", 
+			"http://*/*" 
+					],
+	"host_permissions": [
+
+						"*://*/*"
+					  ],
+  "action": {
+        "default_popup": "popup.html"
+  },
+	"browser_action": {
+		"default_title": "weather",
+		"default_popup": "popup.html" 
+	},
+
+	
+	"content_security_policy": {
+		"extension_pages": "script-src 'self' ; object-src 'self' ",
+		"sandbox": "sandbox allow-scripts; default-src 'self' 'https://api.coindesk.com' 'https://api.cryptonator.com' 'https://api.weatherapi.com' 'https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/'; object-src 'self' ",
+		"pages": ["popup.html"]
+	  }
+
+	  
+}
